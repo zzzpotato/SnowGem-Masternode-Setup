@@ -99,6 +99,8 @@ do
         echo "Last 20 lines of the log for error checking...";
         echo "===============";
         tail -20 ~/.snowgem/debug.log
+	echo "===============";
+	echo "Network unreachable errors can be normal. Just ensure the current block height is rising over time...";
         sleep 60
 done
 
