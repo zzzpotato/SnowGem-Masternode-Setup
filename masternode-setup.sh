@@ -33,11 +33,13 @@ echo -e "#In your wallet go to Tools -> Copy alias data.\n#Paste your alias data
 nano ~/.snowgem/masternode.conf
 
 ###Params
+echo
 read -n1 -r -p "Install Params... Press any key to continue";echo
 wget https://snowgem.org/downloads/snowgemparams.zip -N
 unzip -o snowgemparams.zip -d ~/
 
 ###Setup Swap
+echo
 read -n1 -r -p "Setup virtual memory... Press any key to continue";echo
 
 sudo fallocate -l 4G /swapfile
@@ -47,7 +49,8 @@ sudo swapon /swapfile
 
 free -h
 
-read -n1 -r -p "You should see 4G under Total Swap... Press any key to continue";echo
+echo
+read -n1 -r -p "You should see 4.0G under Total Swap... Press any key to continue";echo
 
 sudo sed -i -e "\$a\/swapfile none swap sw 0" /etc/fstab
 
