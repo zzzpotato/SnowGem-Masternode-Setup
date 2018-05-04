@@ -103,3 +103,5 @@ read -n1 -r -p "You should now see another success message... Press any key to c
 read -n1 -r -p "Wait a few minutes for your masternode to be listed in your local wallet... Press any key to continue";echo
 
 ~/snowgem-wallet/src/snowgem-cli masternodedebug
+
+read -n1 -r -p "If the response is: “Masternode successfully started“, you’re finished.... Press any key to continue";echo
