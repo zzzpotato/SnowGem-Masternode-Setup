@@ -87,8 +87,8 @@ do
         highestblock="$(wget -nv -qO - https://explorer.snowgem.org/api/getblockcount)"
         currentblock="$(~/snowgem-wallet/src/snowgem-cli getblockcount)"
         echo "Comparing block heights to ensure server is fully synced";
-        echo "Highest: $highestblock";echo "Currently at:$currentblock";
-        echo "Checking again in 60 seconds...";echo
+        echo "Highest: $highestblock";echo "Currently at: $currentblock";
+        echo "Checking again in 60 seconds... The install will continue once it's synced.";echo
         echo "Last 10 lines of the log for error checking...";
         echo "===============";
         tail ~/.snowgem/debug.log
@@ -96,6 +96,7 @@ do
 done
 
 ###Masternodedebug
+echo
 read -n1 -r -p "Your blockchain is now synced... Press any key to continue";echo
 ~/snowgem-wallet/src/snowgem-cli masternodedebug
 
