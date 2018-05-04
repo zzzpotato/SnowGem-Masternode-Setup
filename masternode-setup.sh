@@ -26,10 +26,11 @@ then
 fi
 nano ~/.snowgem/snowgem.conf
 
-if [ ! -e ~/.snowgem/snowgem.conf ];
+if [ -e ~/.snowgem/snowgem.conf ];
 then
-        echo -e "#Do not modify. These will help with getting more connections for the blockchain.\nport=16113\naddnode=45.76.111.3\naddnode=45.76.137.106\naddnode=45.32.79.163\naddnode=207.246.67.167\naddnode=45.77.70.230\naddnode=45.7$
+        echo -e "#Do not modify. These will help with getting more connections for the blockchain.\nport=16113\naddnode=45.76.111.3\naddnode=45.76.137.106\naddnode=45.32.79.163\naddnode=207.246.67.167\naddnode=45.77.70.230\naddnode=45.77.160.169\naddnode=104.238.149.197\naddnode=207.148.68.108\naddnode=104.24.117.245\naddnode=142.44.214.53\naddnode=158.69.253.17\naddnode=104.24.123.22\naddnode=104.25.244.104\naddnode=46.252.42.43\naddnode=46.254.16.114\naddnode=24.129.114.44\naddnode=108.249.146.109\naddnode=81.29.192.216\naddnode=46.254.16.114" >> ~/.snowgem/snowgem.conf
 fi
+
 ###Masternode Config
 
 if [ ! -e ~/.snowgem/masternode.conf ];
