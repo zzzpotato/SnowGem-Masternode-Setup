@@ -51,23 +51,26 @@ read -n1 -r -p "You should see 4G under Total Swap... Press any key to continue"
 sudo sed -i -e "\$a\/swapfile none swap sw 0" /etc/fstab
 
 ###Build the binary
-read -n1 -r -p "We are ready to start the build. This can take awhile... Press any key to continue";echo
 
-git clone https://github.com/Snowgem/Snowgem.git snowgem-wallet
+read -r -p "Do you need to build snowgem? (Only choose no if you have already done this) [y/N] " response
+if [[ "$response" =~ ^([yY][eE][sS]|[yY])+$ ]]
+then
+	read -n1 -r -p "We are ready to start the build. This can take awhile... Press any key to continue";echo
 
-cd snowgem-wallet
+	git clone https://github.com/Snowgem/Snowgem.git snowgem-wallet
 
-chmod +x zcutil/build.sh depends/config.guess depends/config.sub autogen.sh share/genbuild.sh src/leveldb/build_detect_platform
+	cd snowgem-wallet
 
-./zcutil/build.sh --disable-rust
+	chmod +x zcutil/build.sh depends/config.guess depends/config.sub autogen.sh share/genbuild.sh src/leveldb/build_detect_platform
+
+	./zcutil/build.sh --disable-rust
+fi
 
 ###Start
 ./src/snowgemd --daemon
 
 read -n1 -r -p "Let's make sure no errors appear and that its running... Press any key to continue";echo
 read -n1 -r -p "You can run tail ~/.snowgem/debug.log to do this yourself... Press any key to continue";echo
-
-tail ~/.snowgem/debug.log
 
 
 #Set Vars
