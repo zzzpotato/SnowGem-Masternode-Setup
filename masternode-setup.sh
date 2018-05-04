@@ -63,11 +63,11 @@ then
 
 	chmod +x zcutil/build.sh depends/config.guess depends/config.sub autogen.sh share/genbuild.sh src/leveldb/build_detect_platform
 
-	./zcutil/build.sh --disable-rust
+	~/snowgem-wallet/zcutil/build.sh --disable-rust
 fi
 
 ###Start
-./src/snowgemd --daemon
+~/snowgem-wallet/src/snowgemd --daemon
 
 read -n1 -r -p "Let's make sure no errors appear and that its running... Press any key to continue";echo
 read -n1 -r -p "You can run tail ~/.snowgem/debug.log to do this yourself... Press any key to continue";echo
