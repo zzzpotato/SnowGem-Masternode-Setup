@@ -1,6 +1,7 @@
 #!/bin/bash
 
 ###Begin
+clear
 read -n1 -r -p "The official guide can be found at https://snowgem.org/how-to-setup-a-masternode/ which contains screenshots of the following steps... Press any key to continue...";echo
 read -n1 -r -p "Before you begin, make sure you have already sent your collateral to an address and waited for 15 confirmations! Press any key to continue...";echo
 read -n1 -r -p "Go to Masternode tab (On the wallet which you received 10000 XSG) and click on “Get MN Priv Key” button, then copy the private key to notepad. Press any key to continue...";echo
