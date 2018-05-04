@@ -19,17 +19,23 @@ sudo apt-get -y install build-essential pkg-config libc6-dev m4 g++-multilib aut
 
 ###Snowgem Config
 mkdir ~/.snowgem
-touch ~/.snowgem/snowgem.conf
 
-echo -e "#In your wallet go to Tools -> Copy snowgem.conf data.\n#Paste your snowgem.conf data here.\n#Then use combo Ctr + X, then type Y then Enter to save.\n\n" >> ~/.snowgem/snowgem.conf
+if [ ! -e ~/.snowgem/snowgem.conf ];
+then
+        echo -e "#In your wallet go to Tools -> Copy snowgem.conf data.\n#Paste your snowgem.conf data here.\n#Then use combo Ctr + X, then type Y then Enter to save.\n\n" >> ~/.snowgem/snowgem.conf
+fi
 nano ~/.snowgem/snowgem.conf
 
-echo -e "#Do not modify. These will help with getting more connections for the blockchain.\nport=16113\naddnode=45.76.111.3\naddnode=45.76.137.106\naddnode=45.32.79.163\naddnode=207.246.67.167\naddnode=45.77.70.230\naddnode=45.77.160.169\naddnode=104.238.149.197\naddnode=207.148.68.108\naddnode=104.24.117.245\naddnode=142.44.214.53\naddnode=158.69.253.17\naddnode=104.24.123.22\naddnode=104.25.244.104\naddnode=46.252.42.43\naddnode=46.254.16.114\naddnode=24.129.114.44\naddnode=108.249.146.109\naddnode=81.29.192.216\naddnode=46.254.16.114" >> ~/.snowgem/snowgem.conf
-
+if [ ! -e ~/.snowgem/snowgem.conf ];
+then
+        echo -e "#Do not modify. These will help with getting more connections for the blockchain.\nport=16113\naddnode=45.76.111.3\naddnode=45.76.137.106\naddnode=45.32.79.163\naddnode=207.246.67.167\naddnode=45.77.70.230\naddnode=45.7$
+fi
 ###Masternode Config
-touch ~/.snowgem/masternode.conf
 
-echo -e "#In your wallet go to Tools -> Copy alias data.\n#Paste your alias data here.\n#Then use combo Ctr + X, then type Y then Enter to save.\n\n" >> ~/.snowgem/masternode.conf
+if [ ! -e ~/.snowgem/masternode.conf ];
+then
+        echo -e "#In your wallet go to Tools -> Copy alias data.\n#Paste your alias data here.\n#Then use combo Ctr + X, then type Y then Enter to save.\n\n" >> ~/.snowgem/masternode.conf
+fi
 nano ~/.snowgem/masternode.conf
 
 ###Params
