@@ -96,9 +96,9 @@ do
         echo "Comparing block heights to ensure server is fully synced";
         echo "Highest: $highestblock";echo "Currently at: $currentblock";
         echo "Checking again in 60 seconds... The install will continue once it's synced.";echo
-        echo "Last 10 lines of the log for error checking...";
+        echo "Last 20 lines of the log for error checking...";
         echo "===============";
-        tail ~/.snowgem/debug.log
+        tail -20 ~/.snowgem/debug.log
         sleep 60
 done
 
