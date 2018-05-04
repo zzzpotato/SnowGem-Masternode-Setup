@@ -11,7 +11,12 @@ usermod -aG sudo username
 cd ~
 ```
 
+##Download
+```
+wget https://raw.githubusercontent.com/zzzpotato/SnowGem-Masternode-Setup/master/masternode-setup.sh; chmod 755 masternode-setup.sh
+```
+
 ## Run the script
 ```
-bash test.sh
+bash masternode-setup.sh
 ```
