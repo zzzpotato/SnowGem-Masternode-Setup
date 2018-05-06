@@ -42,7 +42,7 @@ nano ~/.snowgem/masternode.conf
 ###Params
 echo
 read -n1 -r -p "Install Params... Press any key to continue";echo
-wget https://snowgem.org/downloads/snowgemparams.zip -N
+wget https://snowgem.org/downloads/snowgemparams.zip
 unzip -o snowgemparams.zip -d ~/
 
 ###Setup Swap
