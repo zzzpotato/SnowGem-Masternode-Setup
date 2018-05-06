@@ -1,5 +1,12 @@
 #!/bin/bash
 
+###Check user
+if [ "$EUID" -eq 0 ]
+  then
+        echo -e "Warning: You should not run this as root! Create a new user with sudo permissions!\nThis can be done with (replace username with an actual username such as node):\nadduser username\nusermod -aG sudo username\nsu username\ncd ~\n\nYou will be in a new home directory. Make sure you redownload the script or move it from your /root directory!"
+        exit
+fi
+
 ###Begin
 clear
 read -n1 -r -p "The official guide can be found at https://snowgem.org/how-to-setup-a-masternode/ which contains screenshots of the following steps... Press any key to continue...";echo
