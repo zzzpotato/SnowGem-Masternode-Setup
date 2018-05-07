@@ -15,7 +15,7 @@ read -n1 -r -p "Let's begin... Press any key to continue...";echo
 
 ###Prerequisites
 sudo apt-get update
-sudo apt-get -y install build-essential pkg-config libc6-dev m4 g++-multilib autoconf libtool ncurses-dev unzip git python python-zmq zlib1g-dev wget bsdmainutils automake curl unzip nano
+sudo apt-get -y install build-essential pkg-config libc6-dev m4 g++-multilib autoconf libtool ncurses-dev git python python-zmq zlib1g-dev wget bsdmainutils automake curl unzip nano
 
 ###Snowgem Config
 mkdir ~/.snowgem
