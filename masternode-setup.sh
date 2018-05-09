@@ -12,17 +12,17 @@ clear
 read -n1 -r -p "The official guide can be found at https://snowgem.org/how-to-setup-a-masternode/ which contains screenshots of the following steps... Press any key to continue...";echo
 read -n1 -r -p "Before you begin, make sure you have already sent your collateral to an address and waited for 15 confirmations! Press any key to continue...";echo
 read -n1 -r -p "Go to Masternode tab (On the wallet which you received 10000 XSG) and click on “Get MN Priv Key” button, then copy the private key to notepad. Press any key to continue...";echo
-read -n1 -r -p "The privakey looks like this: 5JJaWWprqeNLwEYd5JucbUne68m51yumu5Peen5j5hrg4nrjej4. Press any key to continue...";echo
+read -n1 -r -p "The private key looks like this: 5JJaWWprqeNLwEYd5JucbUne68m51yumu5Peen5j5hrg4nrjej4. Press any key to continue...";echo
 read -n1 -r -p "Click on “Get Outputs” button, then copy outputs to notepad. Press any key to continue...";echo
 read -n1 -r -p "The outputs looks like this: 8b70363be7e585dde357124e67b182da25053d2f45c8454t4t45e4r5edddgdr4 0. Press any key to continue...";echo
-read -n1 -r -p "Click on “Configure Masternode” button then put your data here. Press any key to continue...";echo
-read -n1 -r -p "Then Click on Configure. A restart message will be appeared and you need to restart your wallet to apply the new configuration. Press any key to continue...";echo
+read -n1 -r -p "Click on the “Configure Masternode” button and enter the copied information. Your Alias name must not contain white space! Press any key to continue...";echo
+read -n1 -r -p "Then Click on Configure. A restart message will appear and you need to restart your wallet to apply the new configuration. Press any key to continue...";echo
 
-read -n1 -r -p "Let's begin... Press any key to continue...";echo
+read -n1 -r -p "Let's begin setting up the VPS... Press any key to continue...";echo
 
 ###Prerequisites
 sudo apt-get update
-sudo apt-get -y install build-essential pkg-config libc6-dev m4 g++-multilib autoconf libtool ncurses-dev unzip git python python-zmq zlib1g-dev wget bsdmainutils automake curl unzip nano
+sudo apt-get -y install build-essential pkg-config libc6-dev m4 g++-multilib autoconf libtool ncurses-dev git python python-zmq zlib1g-dev wget bsdmainutils automake curl unzip nano
 
 ###Snowgem Config
 mkdir ~/.snowgem
@@ -88,7 +88,7 @@ fi
 ~/snowgem-wallet/src/snowgemd --daemon
 
 read -n1 -r -p "Let's make sure no errors appear and that its running... Press any key to continue";echo
-read -n1 -r -p "You can run tail ~/.snowgem/debug.log to do this yourself... Press any key to continue";echo
+read -n1 -r -p "You can run tail ~/.snowgem/debug.log to check this yourself in the future... Press any key to continue";echo
 
 
 #Set Vars
@@ -117,7 +117,7 @@ read -n1 -r -p "Your blockchain is now synced... Press any key to continue";echo
 ~/snowgem-wallet/src/snowgem-cli masternodedebug
 
 ###Finishing touches
-read -n1 -r -p "In your local wallet, select your Alias and then click on Start masternode button... Press any key to continue";echo
+read -n1 -r -p "In your local wallet, select your Alias and then click on the Start Masternode button... Press any key to continue";echo
 read -n1 -r -p "You should now see a success message... Press any key to continue";echo
 read -n1 -r -p "Now click on the Start Alias button... Press any key to continue";echo
 read -n1 -r -p "You should now see another success message... Press any key to continue";echo
