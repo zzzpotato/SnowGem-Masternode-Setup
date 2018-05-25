@@ -29,7 +29,7 @@ mkdir ~/.snowgem
 
 if [ ! -e ~/.snowgem/snowgem.conf ];
 then
-        echo -e "#In your wallet go to Tools -> Copy snowgem.conf data.\n#Paste your snowgem.conf data at the bottom of this file.\n#Then use combo Ctr + X, then type Y then Enter to save.\n\n" >> ~/.snowgem/snowgem.conf
+        echo -e "#In your wallet right click on your newly created alias -> Copy snowgem.conf data.\n#Paste your snowgem.conf data at the bottom of this file.\n#The paste does not correctly format. Be sure to change everything to be on its own line in this file\n#Then use combo Ctr + X, then type Y then Enter to save.\n\n" >> ~/.snowgem/snowgem.conf
 fi
 nano ~/.snowgem/snowgem.conf
 
@@ -42,7 +42,7 @@ fi
 
 if [ ! -e ~/.snowgem/masternode.conf ];
 then
-        echo -e "#In your wallet go to Tools -> Copy alias data.\n#Paste your alias data at the bottom of this file.\n#Then use combo Ctr + X, then type Y then Enter to save.\n\n" >> ~/.snowgem/masternode.conf
+        echo -e "#In your wallet right click on your newly created alias -> Copy alias data.\n#Paste your alias data at the bottom of this file.\n#Then use combo Ctr + X, then type Y then Enter to save.\n\n" >> ~/.snowgem/masternode.conf
 fi
 nano ~/.snowgem/masternode.conf
 
