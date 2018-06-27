@@ -22,6 +22,12 @@ wget https://raw.githubusercontent.com/zzzpotato/SnowGem-Masternode-Setup/master
 bash masternode-setup.sh
 ```
 
+## Updating your masternode
+
+If you need to update your masternode you "can" run this again after stopping your daemon and moving/removing "snowgem-wallet". However you should use this instead:
+
+https://github.com/zzzpotato/Snowgem-masternode-update
+
 ## Thanks
 
 If you need assistance or find an issue within the script, contact me on discord at potato#4515 and I will try to help you resolve it. You can thank me by mining on my SnowGem pool at https://xsgpool.com/
