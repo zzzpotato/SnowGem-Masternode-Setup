@@ -49,7 +49,7 @@ nano ~/.snowgem/masternode.conf
 ###Params
 echo
 read -n1 -r -p "Install Params... Press any key to continue";echo
-wget https://snowgem.org/downloads/snowgemparams.zip
+wget https://github.com/Snowgem/SimpleWallet/releases/download/2.0.0f/snowgemparams.zip -N 
 unzip -o snowgemparams.zip -d ~/
 
 ###Setup Swap
