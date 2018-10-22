@@ -9,14 +9,12 @@ fi
 
 ###Begin
 clear
-read -n1 -r -p "The official guide can be found at https://snowgem.org/how-to-setup-a-masternode/ which contains screenshots of the following steps... Press any key to continue...";echo
+read -n1 -r -p "The official guide can be found at https://www.youtube.com/watch?v=yjD3nXmmerU which contains a video of the following steps... Press any key to continue...";echo
 read -n1 -r -p "Before you begin, make sure you have already sent your collateral to an address and waited for 15 confirmations! Press any key to continue...";echo
-read -n1 -r -p "Go to Masternode tab (On the wallet which you received 10000 XSG) and click on “Get MN Priv Key” button, then copy the private key to notepad. Press any key to continue...";echo
-read -n1 -r -p "The private key looks like this: 5JJaWWprqeNLwEYd5JucbUne68m51yumu5Peen5j5hrg4nrjej4. Press any key to continue...";echo
-read -n1 -r -p "Click on “Get Outputs” button, then copy outputs to notepad. Press any key to continue...";echo
-read -n1 -r -p "The outputs looks like this: 8b70363be7e585dde357124e67b182da25053d2f45c8454t4t45e4r5edddgdr4 0. Press any key to continue...";echo
-read -n1 -r -p "Click on the “Configure Masternode” button and enter the copied information. Your Alias name must not contain white space! Press any key to continue...";echo
-read -n1 -r -p "Then Click on Configure. A restart message will appear and you need to restart your wallet to apply the new configuration. Press any key to continue...";echo
+read -n1 -r -p "Go to Masternode tab and click on the "Generate Masternode Data" button. Press any key to continue...";echo
+read -n1 -r -p "Fill out the information in Setup Masternode using the New Masternode Data shown along with your alias name and VPS IP. Press any key to continue...";echo
+read -n1 -r -p "Confirm restarting the wallet. Press any key to continue...";echo
+
 
 read -n1 -r -p "Let's begin setting up the VPS... Press any key to continue...";echo
 
@@ -29,7 +27,7 @@ mkdir ~/.snowgem
 
 if [ ! -e ~/.snowgem/snowgem.conf ];
 then
-        echo -e "#In your wallet right click on your newly created alias -> Copy snowgem.conf data.\n#Paste your snowgem.conf data at the bottom of this file.\n#The paste does not correctly format. Be sure to change everything to be on its own line in this file\n#Then use combo Ctr + X, then type Y then Enter to save.\n\n" >> ~/.snowgem/snowgem.conf
+        echo -e "#In Modern Wallet, go to the masternodes list and check the box to the left of your new MN. Then go to Actions > Copy Config.\n#Paste your snowgem.conf data at the bottom of this file.\n#If the paste does not correctly format, be sure to change everything to be on its own line in this file.\n#To save, use combo Ctr + X, then type y then Enter.\n\n" >> ~/.snowgem/snowgem.conf
 fi
 nano ~/.snowgem/snowgem.conf
 
@@ -42,7 +40,7 @@ fi
 
 if [ ! -e ~/.snowgem/masternode.conf ];
 then
-        echo -e "#In your wallet right click on your newly created alias -> Copy alias data.\n#Paste your alias data at the bottom of this file.\n#Then use combo Ctr + X, then type Y then Enter to save.\n\n" >> ~/.snowgem/masternode.conf
+        echo -e "#In Modern Wallet, go to the masternodes list and check the box to the elft of your new MN. Then go to Actions > Copy Alias.\n#Paste your alias data at the bottom of this file.\n#To save, use combo Ctr + X, then type y then Enter.\n\n" >> ~/.snowgem/masternode.conf
 fi
 nano ~/.snowgem/masternode.conf
 
@@ -117,12 +115,10 @@ read -n1 -r -p "Your blockchain is now synced... Press any key to continue";echo
 ~/snowgem-wallet/src/snowgem-cli masternodedebug
 
 ###Finishing touches
-read -n1 -r -p "In your local wallet, select your Alias and then click on the Start Masternode button... Press any key to continue";echo
+read -n1 -r -p "In your local wallet, select your Masternode and then go to Actions > Start... Press any key to continue";echo
 read -n1 -r -p "You should now see a success message... Press any key to continue";echo
-read -n1 -r -p "Now click on the Start Alias button... Press any key to continue";echo
-read -n1 -r -p "You should now see another success message... Press any key to continue";echo
-read -n1 -r -p "Wait a few minutes for your masternode to be listed in your local wallet... Press any key to continue";echo
+read -n1 -r -p "Wait a few minutes for your masternode to start... Press any key to continue";echo
 
 ~/snowgem-wallet/src/snowgem-cli masternodedebug
 
-read -n1 -r -p "If the response is: “Masternode successfully started“, you’re finished.... Press any key to continue";echo
+read -n1 -r -p "If the response is: “Masternode successfully started“, you’re finished.... Press any key to finish";echo
