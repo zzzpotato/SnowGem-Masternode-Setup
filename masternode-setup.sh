@@ -121,4 +121,4 @@ read -n1 -r -p "Wait a few minutes for your masternode to start... Press any key
 
 ~/snowgem-wallet/src/snowgem-cli masternodedebug
 
-read -n1 -r -p "If the response is: “Masternode successfully started“, you’re finished.... Press any key to finish";echo
+read -n1 -r -p "If the response is: “Masternode successfully started“, you’re finished.... Press any key to finish";echo 
