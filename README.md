@@ -1,3 +1,7 @@
+Lite Version is best to use:
+
+https://github.com/zzzpotato/Snowgem-Masternode-Lite
+
 # SnowGem-Masternode-Setup
 Bash script for easily installing a masternode on a linux vps
 
